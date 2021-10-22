@@ -15,7 +15,7 @@ const routes = [
   {
     path: '/',
     exact: true,
-    component: () => <Redirect to="/dashboards" />
+    component: () => <Redirect to="/auth/login" />
   },
   {
     path: '/auth',
