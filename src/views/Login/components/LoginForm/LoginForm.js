@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import validate from 'validate.js';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
+import { useDispatch,useSelector } from 'react-redux';
 import { makeStyles } from '@material-ui/styles';
 import { Button, TextField } from '@material-ui/core';
 
@@ -50,7 +50,7 @@ const LoginForm = props => {
     touched: {},
     errors: {}
   });
-
+ 
   useEffect(() => {
     const errors = validate(formState.values, schema);
 
@@ -83,7 +83,7 @@ const LoginForm = props => {
   const handleSubmit = async event => {
     event.preventDefault();
     dispatch(login(formState.values));
-    router.history.push('/');
+    // router.history.push('/');
   };
 
   const hasError = field =>
@@ -137,3 +137,4 @@ LoginForm.propTypes = {
 };
 
 export default LoginForm;
+

@@ -47,6 +47,8 @@ const schema = {
   }
 };
 
+
+
 const useStyles = makeStyles(theme => ({
   root: {},
   fields: {
@@ -210,6 +212,7 @@ const RegisterForm = props => {
         size="large"
         type="submit"
         variant="contained"
+        // onClick={() => this.OnRegister()}
       >
         Create account
       </Button>

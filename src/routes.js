@@ -11,11 +11,19 @@ import DashboardDefaultView from './views/DashboardDefault';
 import OverviewView from './views/Overview';
 import PresentationView from './views/Presentation';
 
+
+
+  const users = localStorage.getItem("user");
+  console.log("data",users);
+  if(users == null) {
+    
+  }
+
 const routes = [
   {
     path: '/',
     exact: true,
-    component: () => <Redirect to="/auth/login" />
+    component: () => <Redirect to="dashboards" />
   },
   {
     path: '/auth',
