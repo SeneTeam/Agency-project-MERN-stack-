@@ -32,6 +32,7 @@ const DashboardAnalytics = () => {
     <Page
       className={classes.root}
       title="Analytics Dashboard"
+      
     >
       <Header />
       <Grid
